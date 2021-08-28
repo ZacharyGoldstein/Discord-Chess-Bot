@@ -2,7 +2,6 @@ import requests
 from datetime import *
 import numpy as np
 import pandas as pd
-import asyncio
 
 model_params = pd.read_csv("data/model_params_20210825.csv")
 
