@@ -3,6 +3,8 @@ import json
 import discord
 import discord_slash
 
+# import asyncio
+
 from discord.ext import commands
 from calcs import process_inputs
 
@@ -20,9 +22,9 @@ async def willrating(ctx, name, rating, variant="Rapid"):
   else:
     await ctx.send(error_msg)
 
-# slash = discord_slash.SlashCommand(bot, sync_commands=True)
-# @slash.slash(name="willrating", description="Enter a lichess username and a rating to see the probability you'll achieve the rating, and when you're expected to do so, if ever.")
-# async def _willrating(ctx, name, rating, variant="Rapid"):
-#   await willrating(ctx, name, rating, variant)
+slash = discord_slash.SlashCommand(bot, sync_commands=True)
+@slash.slash(name="dinorating", description="!dinorating {lichess username} {target rating (must be int less than 3200)} {time control}")
+async def _dinorating(ctx, name, rating, variant="Rapid"):
+  await dinorating(ctx, name, rating, variant)
 
 bot.run(secrets.get('discord-token'))
