@@ -3,8 +3,6 @@ import json
 import discord
 import discord_slash
 
-import asyncio
-
 from discord.ext import commands
 from calcs import process_inputs
 
