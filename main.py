@@ -25,4 +25,4 @@ async def whenrating(ctx, name, rating, variant="Rapid"):
 # async def _whenrating(ctx, name, rating, variant="Rapid"):
 #   await whenrating(ctx, name, rating, variant)
 
-bot.run(secrets.get('discord-token'))
+#bot.run(secrets.get('discord-token'))
